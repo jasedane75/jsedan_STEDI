@@ -1,15 +1,15 @@
 -- Landing customers
 CREATE EXTERNAL TABLE IF NOT EXISTS `db_test`.`raw_customers` (
   `serialnumber` string,
-  `sharewithpublicasofdate` string,
+  `sharewithpublicasofdate` bigint,
   `birthday` string,
-  `registrationdate` string,
-  `sharewithresearchasofdate` string,
+  `registrationdate` bigint,
+  `sharewithresearchasofdate` bigint,
   `customername` string,
   `email` string,
-  `lastupdatedate` string,
-  `phone` string,
-  `sharewithfriendsasofdate` string
+  `lastupdatedate` bigint,
+  `phone` bigint,
+  `sharewithfriendsasofdate` bigint
 )
 ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
 WITH SERDEPROPERTIES (
