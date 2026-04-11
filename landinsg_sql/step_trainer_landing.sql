@@ -3,9 +3,9 @@
 -- landing de step trainer
 
 CREATE EXTERNAL TABLE IF NOT EXISTS `db_test`.`raw_step_trainer` (
-  `sensorReadingTime` string COMMENT 'Fecha de lectura',
+  `sensorReadingTime` bigint COMMENT 'Fecha de lectura',
   `serialNumber` string COMMENT 'Numero de serial',
-  `distanceFromObject` bigint COMMENT 'Distancia al objeto'
+  `distanceFromObject` int COMMENT 'Distancia al objeto'
 )
 ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
 WITH SERDEPROPERTIES (
