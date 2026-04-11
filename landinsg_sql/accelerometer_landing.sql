@@ -1,7 +1,7 @@
 --landing de acelerometro
 
 CREATE EXTERNAL TABLE IF NOT EXISTS `db_test`.`raw_accelerometer` (
-  `timeStamp` string COMMENT 'fecha',
+  `timeStamp` bigint COMMENT 'fecha',
   `user` string COMMENT 'Correo del usuario',
   `x` float,
   `y` float,
